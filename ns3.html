@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Nityashri 💗</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  height:100vh;
+  background:radial-gradient(circle at top,#2a0b2f,#05010a 70%);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  font-family:'Segoe UI',sans-serif;
+}
+
+/* BACKGROUND HEARTS */
+.heart-bg{
+  position:absolute;
+  font-size:26px;
+  opacity:.5;
+  animation:float 6s infinite ease-in-out;
+}
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-120px)}
+  100%{transform:translateY(0)}
+}
+
+/* CARD */
+.card{
+  width:90%;
+  max-width:800px;
+  height:460px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(14px);
+  border-radius:30px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 0 60px rgba(255,80,160,.35);
+}
+
+/* TEDDY GROUP */
+.teddy-wrap{
+  position:absolute;
+  bottom:80px;
+  left:-300px;
+  display:flex;
+  align-items:center;
+  animation:enter 6s ease forwards;
+}
+
+@keyframes enter{
+  100%{left:220px}
+}
+
+/* BOB WALK */
+.teddy{
+  animation:bob .8s infinite ease-in-out;
+}
+@keyframes bob{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(6px)}
+  100%{transform:translateY(0)}
+}
+
+/* ROPE */
+.rope{
+  width:120px;
+  height:3px;
+  background:#cfa670;
+  margin-left:10px;
+}
+
+/* HEART */
+.pull-heart{
+  font-size:46px;
+  margin-left:10px;
+  animation:glow 1.4s infinite;
+}
+@keyframes glow{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.2)}
+  100%{transform:scale(1)}
+}
+
+/* TEXT */
+.text{
+  position:absolute;
+  bottom:60px;
+  width:100%;
+  text-align:center;
+  color:white;
+  font-size:22px;
+  opacity:0;
+  animation:show 2s forwards;
+  animation-delay:6.2s;
+}
+@keyframes show{to{opacity:1}}
+
+button{
+  margin-top:16px;
+  padding:14px 34px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(135deg,#ff4fa3,#8b2cff);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 0 25px rgba(255,80,160,.7);
+}
+
+/* PART 2 */
+.part2{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at center,#2a0b2f,#05010a 75%);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  pointer-events:none;
+  transition:.8s ease;
+}
+
+.part2.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.inner{
+  text-align:center;
+  color:white;
+}
+
+.teddy-sit{
+  animation:breathe 3s infinite ease-in-out;
+  margin-bottom:20px;
+}
+
+@keyframes breathe{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(6px)}
+  100%{transform:translateY(0)}
+}
+
+.comfort{
+  font-size:18px;
+  max-width:400px;
+}
+
+.line{
+  opacity:0;
+  animation:fadeIn 1.2s forwards;
+}
+
+.line:nth-child(1){animation-delay:0.5s}
+.line:nth-child(2){animation-delay:2s}
+.line:nth-child(3){animation-delay:3.5s}
+.line:nth-child(4){animation-delay:5s}
+
+@keyframes fadeIn{
+  to{opacity:1}
+}
+
+.comfort button{
+  margin-top:30px;
+  padding:14px 30px;
+  border:none;
+  border-radius:18px;
+  background:linear-gradient(135deg,#ff7eb3,#b36bff);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 0 25px rgba(255,120,180,.7);
+}
+
+/* PART 3 */
+.part3{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at center,#3b0a2f,#07010b 75%);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  pointer-events:none;
+  transition:1s ease;
+}
+
+.part3.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.p3-box{
+  text-align:center;
+  color:white;
+  max-width:420px;
+}
+
+.p3-teddy{
+  font-size:64px;
+  animation:breathe 3s infinite ease-in-out;
+  margin-bottom:10px;
+}
+
+.chat{
+  margin:20px 0;
+}
+
+.msg{
+  opacity:0;
+  animation:fadeUp 0.8s forwards;
+  margin:6px 0;
+}
+
+.msg:nth-child(1){animation-delay:.5s}
+.msg:nth-child(2){animation-delay:1.2s}
+.msg:nth-child(3){animation-delay:2s}
+.msg:nth-child(4){animation-delay:2.8s}
+.msg:nth-child(5){animation-delay:3.6s}
+.msg:nth-child(6){animation-delay:4.4s}
+
+.bold{
+  color:#ff8fc7;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.choices{
+  margin-top:25px;
+}
+
+.choices button{
+  margin:6px;
+  padding:12px 20px;
+  border:none;
+  border-radius:14px;
+  background:rgba(255,255,255,0.15);
+  color:white;
+  cursor:pointer;
+  backdrop-filter:blur(6px);
+}
+
+.response{
+  margin-top:20px;
+  min-height:40px;
+  font-size:18px;
+  color:#ffd1ea;
+}
+
+.next-btn{
+  margin-top:30px;
+  padding:14px 30px;
+  border:none;
+  border-radius:18px;
+  background:linear-gradient(135deg,#ff5fa2,#a04bff);
+  color:white;
+  cursor:pointer;
+  box-shadow:0 0 25px rgba(255,90,160,.6);
+}
+
+/* PART 4 - Tic Tac Toe */
+.part4{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at center,#2a0b2f,#05010a 75%);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  pointer-events:none;
+  transition:1s ease;
+}
+
+.part4.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.game-card{
+  width:90%;
+  max-width:520px;
+  background:rgba(255,255,255,0.07);
+  border-radius:26px;
+  padding:25px;
+  text-align:center;
+  color:white;
+  backdrop-filter:blur(12px);
+  box-shadow:0 0 60px rgba(255,80,160,.25);
+}
+
+.game-title{
+  font-size:24px;
+  margin-bottom:8px;
+}
+
+.rule{
+  font-size:16px;
+  color:#ffd1ea;
+  margin-bottom:15px;
+}
+
+.board{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:10px;
+  margin:20px auto;
+  width:300px;
+}
+
+.cell{
+  width:90px;
+  height:90px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:38px;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.cell:hover{
+  transform:scale(1.05);
+  background:rgba(255,255,255,0.18);
+}
+
+.win-msg{
+  font-size:20px;
+  margin-top:15px;
+  color:#ffb3d6;
+  min-height:40px;
+}
+
+.hearts{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.heart{
+  position:absolute;
+  font-size:22px;
+  animation:fall 4s linear infinite;
+  opacity:0.8;
+}
+
+@keyframes fall{
+  0%{transform:translateY(-30px); opacity:0}
+  20%{opacity:1}
+  100%{transform:translateY(600px); opacity:0}
+}
+
+.shake{
+  animation:shake .5s ease-in-out;
+}
+@keyframes shake{
+  0%{transform:translateX(0)}
+  25%{transform:translateX(-8px)}
+  50%{transform:translateX(8px)}
+  75%{transform:translateX(-8px)}
+  100%{transform:translateX(0)}
+}
+
+/* PART 5 - Questions */
+.part5{
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at center,#2a0b2f,#05010a 75%);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  pointer-events:none;
+  transition:1s ease;
+}
+
+.part5.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+.q-card{
+  width:90%;
+  max-width:520px;
+  background:rgba(255,255,255,0.07);
+  border-radius:26px;
+  padding:25px;
+  text-align:center;
+  color:white;
+  backdrop-filter:blur(12px);
+  box-shadow:0 0 60px rgba(255,80,160,.25);
+}
+
+.question{
+  font-size:22px;
+  margin-bottom:15px;
+}
+
+.q-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-top:20px;
+}
+
+.q-buttons button{
+  padding:12px 22px;
+  border:none;
+  border-radius:16px;
+  background:linear-gradient(135deg,#ff4fa3,#8b2cff);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 0 25px rgba(255,80,160,.7);
+  position:relative;
+}
+
+.q-buttons button.no{
+  background:rgba(255,255,255,0.14);
+  box-shadow:none;
+}
+
+.small-msg{
+  margin-top:18px;
+  font-size:18px;
+  color:#ffd1ea;
+  min-height:40px;
+}
+/* PART 7 - LOVE LETTER */
+.letter{
+  position:relative;
+  width:100%;
+  height:420px;
+  border-radius:24px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.2);
+  overflow:hidden;
+  box-shadow:0 0 50px rgba(255,80,160,.25);
+}
+
+.page{
+  position:absolute;
+  inset:0;
+  padding:30px;
+  display:none;
+  animation:fadeIn 0.8s ease;
+}
+
+.page-content{
+  font-size:18px;
+  line-height:1.6;
+  color:white;
+  text-align:left;
+}
+
+.letter-controls{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND HEARTS -->
+<div class="heart-bg" style="left:15%;top:80%">💗</div>
+<div class="heart-bg" style="left:70%;top:30%;animation-delay:1s">💗</div>
+<div class="heart-bg" style="left:40%;top:60%;animation-delay:2s">💗</div>
+
+<div class="card">
+
+  <!-- TEDDY + ROPE + HEART -->
+  <div class="teddy-wrap">
+
+    <!-- SVG TEDDY -->
+    <svg class="teddy" width="160" height="200" viewBox="0 0 160 200">
+      <!-- ears -->
+      <circle cx="40" cy="40" r="22" fill="#d9a56f"/>
+      <circle cx="120" cy="40" r="22" fill="#d9a56f"/>
+
+      <!-- head -->
+      <circle cx="80" cy="70" r="40" fill="#e8b37a"/>
+
+      <!-- eyes -->
+      <circle cx="65" cy="65" r="5"/>
+      <circle cx="95" cy="65" r="5"/>
+
+      <!-- mouth -->
+      <path d="M70 85 Q80 92 90 85" stroke="#7a3e1d" stroke-width="3" fill="none"/>
+
+      <!-- body -->
+      <ellipse cx="80" cy="140" rx="45" ry="38" fill="#e8b37a"/>
+
+      <!-- arms -->
+      <ellipse cx="30" cy="135" rx="18" ry="30" fill="#e8b37a"/>
+      <ellipse cx="130" cy="135" rx="18" ry="30" fill="#e8b37a"/>
+
+      <!-- legs -->
+      <ellipse cx="60" cy="185" rx="18" ry="14" fill="#d9a56f"/>
+      <ellipse cx="100" cy="185" rx="18" ry="14" fill="#d9a56f"/>
+    </svg>
+
+    <div class="rope"></div>
+    <div class="pull-heart">💗</div>
+  </div>
+
+  <!-- TEXT -->
+  <div class="text">
+    DUMBB! Shreyash was waiting for you… 💗  
+    <br>
+    Click ENTER to go inside his heart
+    <br>
+   <button onclick="goPart2()">ENTER</button>
+  </div>
+
+</div>
+
+<!-- PART 2 -->
+<div id="part2" class="part2">
+  <div class="inner">
+    <!-- TEDDY SITTING -->
+    <svg class="teddy-sit" width="180" height="220" viewBox="0 0 160 200">
+      <circle cx="40" cy="40" r="22" fill="#d9a56f"/>
+      <circle cx="120" cy="40" r="22" fill="#d9a56f"/>
+      <circle cx="80" cy="70" r="40" fill="#e8b37a"/>
+      <circle cx="65" cy="65" r="5"/>
+      <circle cx="95" cy="65" r="5"/>
+      <path d="M70 85 Q80 92 90 85" stroke="#7a3e1d" stroke-width="3" fill="none"/>
+      <ellipse cx="80" cy="145" rx="48" ry="40" fill="#e8b37a"/>
+      <ellipse cx="55" cy="170" rx="22" ry="18" fill="#d9a56f"/>
+      <ellipse cx="105" cy="170" rx="22" ry="18" fill="#d9a56f"/>
+    </svg>
+
+    <!-- TEXT -->
+    <div class="comfort">
+      <p class="line">Hey Nityashri… 🤍</p>
+      <p class="line">I know today was really heavy.</p>
+      <p class="line">I know you tried to stay strong.</p>
+      <p class="line">You don’t have to be strong here.</p>
+
+      <button onclick="showPart3()">Come sit here 🤍</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function goPart2(){
+  document.querySelector('.card').style.opacity = '0';
+  document.getElementById('part2').classList.add('active');
+}
+
+function showPart3(){
+  document.getElementById("part2").classList.remove("active");
+  document.getElementById("part3").classList.add("active");
+}
+
+function answerMood(type){
+  let text = "";
+
+  if(type === "tired"){
+    text = "Yeah… I knew it. Come here, pookie 🤍";
+  }
+  if(type === "annoyed"){
+    text = "Valid. Completely valid. Princess rage moment 😌";
+  }
+  if(type === "better"){
+    text = "That smile? Yeah. That one.";
+  }
+
+  document.getElementById("response").innerText = text;
+}
+</script>
+
+<!-- PART 3 -->
+<div id="part3" class="part3">
+  <div class="p3-box">
+    <div class="p3-teddy">🧸</div>
+
+    <div class="chat">
+      <p class="msg">Okay… my princess 😌</p>
+      <p class="msg">Don’t pretend you’re not tired.</p>
+      <p class="msg">Today was shit. I know.</p>
+      <p class="msg">And still… you handled it.</p>
+      <p class="msg bold">Also— don’t act strong here.</p>
+      <p class="msg bold">Fck u. I’m here.</p>
+    </div>
+
+    <div class="choices">
+      <button onclick="answerMood('tired')">I’m tired</button>
+      <button onclick="answerMood('annoyed')">I’m annoyed</button>
+      <button onclick="answerMood('better')">I’m okay now</button>
+    </div>
+
+    <div id="response" class="response"></div>
+
+    <button class="next-btn" onclick="goPart4()">What are you planning?</button>
+  </div>
+</div>
+
+<!-- PART 4 -->
+<div id="part4" class="part4">
+  <div class="game-card" id="gameCard">
+    <div class="game-title">Tic-Tac-Toe 😏</div>
+    <div class="rule">RULE: If you lose… you marry me! 💍</div>
+
+    <div class="board" id="board"></div>
+
+    <div class="win-msg" id="winMsg"></div>
+    <button class="next-btn" id="replayBtn" onclick="resetGame()" style="display:none;">Play Again</button>
+  </div>
+
+  <div class="hearts" id="hearts"></div>
+</div>
+
+<!-- PART 5 -->
+<div id="part5" class="part5">
+  <div class="q-card">
+    <div class="question" id="questionText">Do you love me? 💗</div>
+    <div class="q-buttons">
+      <button onclick="yesAnswer()">YES</button>
+      <button class="no" id="noBtn" onclick="noAnswer()">NO</button>
+    </div>
+    <div class="small-msg" id="smallMsg"></div>
+  </div>
+</div>
+
+<script>
+/* PART 4 */
+let boardEl = document.getElementById("board");
+let winMsg = document.getElementById("winMsg");
+let hearts = document.getElementById("hearts");
+let replayBtn = document.getElementById("replayBtn");
+
+let board = ["", "", "", "", "", "", "", "", ""];
+let gameOver = false;
+
+const winCombos = [
+  [0,1,2],[3,4,5],[6,7,8],
+  [0,3,6],[1,4,7],[2,5,8],
+  [0,4,8],[2,4,6]
+];
+
+function createBoard(){
+  boardEl.innerHTML = "";
+  for(let i=0;i<9;i++){
+    let cell = document.createElement("div");
+    cell.classList.add("cell");
+    cell.setAttribute("data-index", i);
+    cell.addEventListener("click", () => playerMove(i));
+    cell.innerText = board[i];
+    boardEl.appendChild(cell);
+  }
+}
+
+function playerMove(index){
+  if(gameOver) return;
+  if(board[index] !== "") return;
+
+  board[index] = "🌹";
+  updateBoard();
+
+  // AI will always win:
+  for(let combo of winCombos){
+    let [a,b,c] = combo;
+    let values = [board[a], board[b], board[c]];
+    if(values.filter(v => v === "🌹").length === 2 && values.includes("")){
+      let idx = combo[values.indexOf("")];
+      board[idx] = "💗";
+      updateBoard();
+      break;
+    }
+  }
+
+  // If AI can win now, AI wins
+  for(let combo of winCombos){
+    let [a,b,c] = combo;
+    let values = [board[a], board[b], board[c]];
+    if(values.filter(v => v === "💗").length === 2 && values.includes("")){
+      let idx = combo[values.indexOf("")];
+      board[idx] = "💗";
+      updateBoard();
+      winGame("💗");
+      return;
+    }
+  }
+
+  // Otherwise pick a smart spot
+  if(board[4] === ""){
+    board[4] = "💗";
+    updateBoard();
+  } else {
+    let empty = board.map((v,i)=>v===""?i:null).filter(v=>v!==null);
+    let pick = empty[Math.floor(Math.random()*empty.length)];
+    board[pick] = "💗";
+    updateBoard();
+  }
+
+  // If AI won after this move
+  if(checkWin("💗")){
+    winGame("💗");
+  }
+}
+
+function checkWin(player){
+  return winCombos.some(combo => combo.every(i => board[i] === player));
+}
+
+function winGame(player){
+  gameOver = true;
+  if(player === "💗"){
+    winMsg.innerText = "Yaayyy… you’re mine now, Babee!! 💖";
+    createHearts();
+    document.getElementById("gameCard").classList.add("shake");
+    replayBtn.style.display = "block";
+    setTimeout(()=>{ document.getElementById("gameCard").classList.remove("shake"); }, 600);
+    setTimeout(()=>{ goPart5(); }, 2400);
+  }
+}
+
+function updateBoard(){
+  let cells = document.querySelectorAll(".cell");
+  cells.forEach((cell,i)=> cell.innerText = board[i]);
+}
+
+function resetGame(){
+  board = ["", "", "", "", "", "", "", "", ""];
+  gameOver = false;
+  winMsg.innerText = "";
+  hearts.innerHTML = "";
+  replayBtn.style.display = "none";
+  createBoard();
+}
+
+function createHearts(){
+  hearts.innerHTML = "";
+  for(let i=0;i<20;i++){
+    let h = document.createElement("div");
+    h.classList.add("heart");
+    h.innerText = "💗";
+    h.style.left = Math.random()*90 + "%";
+    h.style.animationDelay = Math.random()*2 + "s";
+    hearts.appendChild(h);
+  }
+}
+
+function goPart4(){
+  document.getElementById("part3").classList.remove("active");
+  document.getElementById("part4").classList.add("active");
+  resetGame();
+}
+
+function goPart5(){
+  document.getElementById("part4").classList.remove("active");
+  document.getElementById("part5").classList.add("active");
+}
+
+/* PART 5 */
+let questionIndex = 0;
+let questions = [
+  "Do you love me? 💗",
+  "Will you be my Valentine? 💝",
+  "Will you marry me? 💍",
+  "Will you stay with me forever? ❤️"
+];
+
+function yesAnswer(){
+  questionIndex++;
+
+  if(questionIndex < questions.length){
+    document.getElementById("questionText").innerText = questions[questionIndex];
+    document.getElementById("smallMsg").innerText = "Awwww… you made my day 😭💗";
+  } else {
+    // After last question
+    document.getElementById("part5").classList.remove("active");
+    document.getElementById("part6").classList.add("active");
+  }
+}
+
+function noAnswer(){
+  let btn = document.getElementById("noBtn");
+  btn.style.transform = `translate(${Math.random()*120 - 60}px, ${Math.random()*50 - 25}px)`;
+  document.getElementById("smallMsg").innerText = "No no… you can’t say that 😌";
+}
+
+function goLoveLetter(){
+  document.getElementById("part6").classList.remove("active");
+  document.getElementById("part7").classList.add("active");
+  currentPage = 1;
+  showPage(currentPage);
+}
+
+</script>
+
+<script>
+/* PART 7 - Love Letter */
+let currentPage = 1;
+let totalPages = 5;
+
+function showPage(page){
+  for(let i=1; i<=totalPages; i++){
+    document.getElementById("page"+i).style.display = "none";
+  }
+  document.getElementById("page"+page).style.display = "block";
+
+  document.getElementById("prevPage").style.display = (page === 1) ? "none" : "block";
+  document.getElementById("nextPage").innerText = (page === totalPages) ? "Finish" : "Next Page";
+}
+
+function nextPage(){
+  if(currentPage < totalPages){
+    currentPage++;
+    showPage(currentPage);
+  } else {
+    alert("Love Letter Completed 😍");
+  }
+}
+
+function prevPage(){
+  if(currentPage > 1){
+    currentPage--;
+    showPage(currentPage);
+  }
+}
+</script>
+
+
+<!-- PART 6 - FINAL ENDING SCREEN -->
+<div id="part6" class="part5">
+  <div class="q-card">
+    <div class="question" style="font-size:26px;">Yayy!! 😭💗</div>
+    <div class="small-msg" style="font-size:20px;">
+      You said YES to everything…  
+      <br>
+      So now…  
+      <span style="color:#ffb3d6; font-size:30px;">I LOVE YOU 💖</span>
+    </div>
+    <button class="next-btn" style="margin-top:20px;" onclick="goLoveLetter()">Next</button>
+  </div>
+</div>
+<!-- PART 7 - LOVE LETTER -->
+<div id="part7" class="part5">
+  <div class="q-card">
+    <div class="letter">
+      <div class="page" id="page1">
+        <div class="page-content">
+          <p>Hey Princess,</p>
+          <p>I know today was really hard for you. I’m sorry you had to go through all of that. You don’t deserve any of this, and I wish I could take away your pain.</p>
+          <p>But I want you to know one thing:</p>
+          <p><strong>You are strong. You are amazing. And you are not alone.</strong></p>
+        </div>
+      </div>
+
+      <div class="page" id="page2">
+        <div class="page-content">
+          <p>Whenever you feel low, remember that someone is always thinking about you and caring for you.</p>
+          <p>Even when you feel like crying, it’s okay—because tears are just your heart talking.</p>
+          <p>I’m not perfect, but I promise you this:</p>
+          <p><strong>I will always try to make you smile, protect you, and stand by you.</strong></p>
+        </div>
+      </div>
+
+      <div class="page" id="page3">
+        <div class="page-content">
+          <p>So please, don’t be sad.</p>
+          <p>Take rest, drink water, and sleep peacefully tonight.</p>
+          <p>Tomorrow will be better, I promise.</p>
+          <p>And just so you know…</p>
+          <p><strong>You mean a lot to me. More than words can say.</strong></p>
+        </div>
+      </div>
+
+      <div class="page" id="page4">
+        <div class="page-content">
+          <p>And don’t forget you said YES to me!! 😏😁🥳</p>
+          <p><strong>I LOVEEE YOUUU 💘💖💗</strong></p>
+          <p style="margin-top:20px; color:#ffd1ea;">💗✨</p>
+        </div>
+      </div>
+
+      <div class="page" id="page5">
+        <div class="page-content">
+          <p style="font-size:28px; font-weight:bold; color:#ffb3d6;">I LOVE YOU</p>
+          <p style="font-size:18px; margin-top:10px;">Forever & Always 💖</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="letter-controls">
+      <button class="next-btn" id="prevPage" onclick="prevPage()" style="display:none;">Previous</button>
+      <button class="next-btn" id="nextPage" onclick="nextPage()">Next Page</button>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
